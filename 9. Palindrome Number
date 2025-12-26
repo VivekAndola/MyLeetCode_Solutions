@@ -1,0 +1,67 @@
+## Question
+
+Given an integer x, return true if x is a palindrome, and false otherwise.
+
+Example 1:
+
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+Example 2:
+
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+Example 3:
+
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+ 
+
+Constraints:
+
+-231 <= x <= 231 - 1
+ 
+
+Follow up: Could you solve it without converting the integer to a string?
+
+## Solution
+
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0 or (x != 0 and x % 10 == 0) :
+            return False
+        rev_x = 0
+        while x > rev_x :
+            rev_x = rev_x * 10 + x % 10
+            x //= 10
+        return x == rev_x or x == rev_x // 10 
+
+'''
+Logic : 
+- we have to take 1 digit at a time from the end of x and add it to rev_x, in such a way that in each loop we treat the previously avaiable value in re_x to be 1 place higher. Thus our goal of reversing will work
+- if 121 is number, we peel of 1 from the end , assign it to rev_x in 1st loop and then remove the digit from x, 
+- then in the next loop we ove hte already present 1 in rev_x to 10s position so that our new number peeled i.e. 2 is added at 1s place, 
+- if 10 is not multiplied then we will keep on adding numbers at 1s place, failing to create the reverse number.
+
+Example : 
+
+x = 1331
+
+loop 1 : 
+start -> x = 1331 rev_x = 0
+
+rev_x = rev_x * 10 + x % 10
+x //= 10
+
+end -> x = 133 rev_x = 1
+
+loop 2 : 
+start -> x = 133 rev_x = 1
+
+rev_x = rev_x * 10 + x % 10
+x //= 10
+
+end - x = 13 rev_x = 10 + 3 i.e. 13
+'''
