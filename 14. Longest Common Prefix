@@ -1,0 +1,24 @@
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        if not strs :
+            return ""
+        strs = sorted(strs , key=len)
+        str_1 = strs[0]
+
+        for i in range(len(str_1)):
+            char = str_1[i]
+
+            for s in strs[1:] :
+                if char != s[i] :
+                    return str_1[:i]
+        return str_1
+
+
+
+'''
+Logic: 
+1. if array is empty return empty string
+2. sort to get shortest length string 1st so that we only have to loop through chars of this string which is max possible prefix length
+3. get character by character of this string and check with the respective position character of the remaining strings in the list
+4. if any mismatch return immediatly and give the string upto that point as output
+5. if we ar eable to complete the loop , means that whole string is present as prefix in all strings, s owe return that whole string
