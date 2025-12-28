@@ -1,0 +1,34 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        mapping = {
+            ')' : '(',
+            '}' : '{',
+            ']' : '['
+        }
+        for char in s :
+            if char in '({[':
+                stack.append(char)
+            else :
+                if not stack:
+                    return False      
+                if stack[-1] != mapping[char] :
+                    return False
+                else :
+                    stack.pop()
+        return len(stack) == 0
+
+'''
+Logic:
+
+We have to use the concept of STACK in this question, where LIFO principle is used.
+Last bracket in first bracket out, if it fails anywhere return false
+
+- Now if we encounter a opening bracket, we append it to our array
+- if a closing bracket is encounterd :
+    -- Our STACK (Array) should not be null since that will mean we only have a closing bracket or combination of such case
+    -- The last element of the STACK should be our Character bracket we currently have in the loop, meaning the last opening bracket should be closed first. We access the CHAR and use a mapping dictionary to get respective opening bracket, this is needed because we would need to match STACK's last opening bracket with respective closing bracket, but in the loop we currently will have the closing brack, we will need to get the opening bracket for that, so that the match works corretly/.
+    -- If that brackets do not match we say that the bracket did not close correctly and return False. Because the last opening bracket in the STACK must close first
+    -- If we do match the correct opening bracket, we remove it from the STACK and move to the next CHAR in the loop
+- iN the end if STACK is empty we can say all brackets got closed correctly , so True else False
+'''
