@@ -1,0 +1,26 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        write = 0
+
+        for read in range(1, len(nums)):
+            if nums[read] != nums[write] :
+                write += 1
+                nums[write] = nums[read]
+        return write + 1
+
+
+'''
+Logic:
+
+Question asks to maintain position and replace duplicate items with unique ones.
+
+Approach:
+
+- We can do this but creating 2 pointers which will represent 2 values which we will compare and decide if they are unique or not, 
+- if unique we will update the list at the position next to the last position we have made the write
+- to start we will take write at the 0 index position since that item will always remain unique, we can assume default write has happed there
+- for read we will start index 1 and gradually move forward
+- since array is a sorted one, all duplicate are located one after the other until the next unique appears like [0 , 0, 0, 0, 1....]
+- we can start with index 0 for write ad 1 for read, compare then and 
+- if the values at these position are not equal we update that element at the read position to the write + 1 position 
+- (since we assume we have already written a item where write currently is)
