@@ -8,7 +8,7 @@ I revisit any question at some point of time, and somehow again forgot the conce
 
 ## Note: 
 
-Mostly i am taking help from either gpt or gemini to understand the concepts or the question and build logic, hopefully as i move ahead i should be able to solve question entirly upon my own. :)
+Mostly i am taking help from either gpt or gemini to understand the concepts or the question and build logic, hopefully as i move ahead i should be able to solve question entirely upon my own. :)
 
 ## Reference
 
