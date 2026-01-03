@@ -1,0 +1,27 @@
+## Question:
+
+Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+
+Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+
+Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.
+Return k.
+
+## Solution:
+
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        write = 0
+        for i in range(len(nums)) :
+            if nums[i] != val :
+                nums[write] = nums[i]
+                write += 1
+        return write
+
+## Logic:
+
+- If we have an item in the array which is not equal to the value given, we have to do nothing and move forward
+- If we have an item in the array which is equal to the value given, we have to replace it with a item that is not equal to the value
+- so basically the core logic will be to treat each item in the array as just positions to write, we only write into the position if read pointer (i) gives us a item != value
+- the write moves forward only in such conditions, in all other condition the read (i) keeps moving forward to find the next item that is != value, when it finds it:
+- that item is written at the postion where write was at last, then both read and write moves forward.
