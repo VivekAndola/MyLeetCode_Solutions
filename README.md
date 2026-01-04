@@ -12,6 +12,6 @@ Mostly i am taking help from either gpt or gemini to understand the concepts or 
 
 ## Reference
 
-To find respective promplems, find the respective question in leet code problems through its question number in the file name
+Find the respective question in leet code problems set. (Matching each code File;s title as respective Question Number)
 
 https://leetcode.com/problemset/
