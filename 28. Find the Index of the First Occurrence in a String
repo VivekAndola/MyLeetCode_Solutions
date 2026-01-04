@@ -1,0 +1,46 @@
+# Question:
+
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+ 
+Example 1:
+
+Input: haystack = "sadbutsad", needle = "sad"
+Output: 0
+Explanation: "sad" occurs at index 0 and 6.
+The first occurrence is at index 0, so we return 0.
+Example 2:
+
+Input: haystack = "leetcode", needle = "leeto"
+Output: -1
+Explanation: "leeto" did not occur in "leetcode", so we return -1.
+
+# Solution:
+
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        
+        if not needle:
+            return 0
+
+        if len(haystack) < len(needle):
+            return -1
+
+        for i in range( len(haystack) - len(needle) + 1):
+            if haystack[i : i + len(needle)] == needle:
+                return i
+        
+        return -1
+
+# Logic:
+
+- We have to find the position at which we can find the complete "needle" string in next index positions
+- Now we clearly do not need to check character by character, we just need to slice of the strings equal to the length of "needle" string, and match it
+- we also need to check these strings until there is a string equal to the length of "needle" string possible, that means we don't need to check last few combination where we cannot form string of len = len"needle"
+- we go and create sub-strings in each loop moving forward, and return the 1st index position where match happens.
+- we return - 1 in other cases
+- exceptions : empty needle string OR if length of needle string > len haystack string
+
+
+# Shortcut:
+
+haystack.find(needle)   ==> this will return 1st matching index or -1 if no match occurs
