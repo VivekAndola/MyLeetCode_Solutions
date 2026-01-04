@@ -1,17 +1,27 @@
 # MyLeetCode_Solutions
 
-Creating a Database of my solved Leetcode problems, and most importantly the Logic i was able to understand, and the approach taken
+A personal collection of my LeetCode solutions with detailed explanations of the logic and approach used to solve each problem.
 
-## Goal: 
+## Goal
 
-I revisit any question at some point of time, and somehow again forgot the concept, i will have my thinking steps with me in my code base.
+To create a reference database where I can:
+- Revisit problems I've previously solved
+- Understand the reasoning behind each solution
+- Document my thought process and approach
+- Build a knowledge base that grows with my problem-solving skills
 
-## Note: 
+This repository serves as my personal study guide—if I forget a concept or approach, I'll have my thinking steps documented right alongside the code.
 
-Mostly i am taking help from either gpt or gemini to understand the concepts or the question and build logic, hopefully as i move ahead i should be able to solve question entirely upon my own. :)
+## Current Approach
 
-## Reference
+I'm currently using AI tools (ChatGPT and Gemini) to help me understand complex concepts and build problem-solving logic. As I progress, my goal is to develop the skills to solve problems independently.
 
-Find the respective question in leet code problems set. (Matching each code File;s title as respective Question Number)
+## Structure
 
-https://leetcode.com/problemset/
+Each solution file is named according to its LeetCode problem number for easy reference.
+
+**Find the problems here:** [LeetCode Problem Set](https://leetcode.com/problemset/)
+
+## Why This Repo?
+
+Learning to code isn't just about solving problems—it's about understanding *why* a solution works. This repository is my journey of building that understanding, one problem at a time.
