@@ -14,7 +14,7 @@ This repository serves as my personal study guide—if I forget a concept or app
 
 ## Current Approach
 
-I'm currently using AI tools (ChatGPT and Gemini) to help me understand complex concepts and build problem-solving logic. As I progress, my goal is to develop the skills to solve problems independently.
+I'm currently using AI tools (ChatGPT, Claude & Gemini) to help me understand complex concepts and build problem-solving logic. As I progress, my goal is to develop the skills to solve problems independently.
 
 ## Structure
 
